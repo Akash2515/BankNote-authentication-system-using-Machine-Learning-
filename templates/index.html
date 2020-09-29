@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bank note authentication</title>
+</head>
+<body>
+	{%block form%}
+	<form action="http://127.0.0.1:8000/predict" method="POST">
+		
+	<label for="fname" >Variance</label>
+    <input type="text" id="fname" name="variance" min="1" max="5" >
+    <br>
+    <label for="fname" >Skewness</label>
+    <input type="text" id="fname" name="skewness" min="1" max="5" >
+    <br>
+    <label for="fname" >Curtosis</label>
+    <input type="text" id="fname" name="curtosis" min="1" max="5">
+    <br>
+    <label for="fname" >Entropy</label>
+    <input type="text" id="fname" name="entropy" min="1" max="5">
+    <br>
+    <label for="fname">Result</label>
+    <!-- <output type="text" >  -->
+    	<textarea> {{ result }}</textarea>
+
+    <br>
+    <br>
+    <br>
+    
+    <input type="submit" name="submit" class="btn" value="submit">
+	</form>
+	{%endblock form%}
+
+
+</body>
+</html>
